@@ -30,3 +30,5 @@ The easiest way to run it - inside Android Studio [full instruction](https://med
 - After that the Gradle build will begins and let it to be finish.
 - Run Project
 - Once the Gradle Build finished Click the RUN Icon or shift+F10 to Run the Project
+
+[Cordova official android guide](https://cordova.apache.org/docs/ru/latest/guide/platforms/android/index.html)
