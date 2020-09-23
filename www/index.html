@@ -1,17 +1,36 @@
 <html>
 <head>
-    <meta
-        http-equiv="Content-Security-Policy"
-        content="default-src *;
-            style-src * 'self' 'unsafe-inline' 'unsafe-eval';
-            script-src * 'self' 'unsafe-inline' 'unsafe-eval';
-        "
-     >
+<meta
+    http-equiv="Content-Security-Policy"
+    content="default-src *;
+        style-src * 'self' 'unsafe-inline' 'unsafe-eval';
+        script-src * 'self' 'unsafe-inline' 'unsafe-eval';
+    "
+>
 </head>
 <body>
 <iframe
-        style="width: 100%; height: calc(100vh - 20px);"
-        src="http://10.0.2.2:4242/"
+    style="width: 100%; height: calc(100vh - 20px);"
 ></iframe>
+<input
+    style="width: 100%;"
+/>
+<script>
+    var src = localStorage.getItem('src') || "http://10.9.80.67:4242/sberclan.kz.mobile/"
+
+    var iframe = document.querySelector('iframe')
+    var input = document.querySelector('input')
+
+    input.value = src
+    iframe.src = src
+
+    onInputChange = () => {
+        const { value } = input
+        iframe.src = value
+        localStorage.setItem('src', value)
+    }
+
+    input.onchange = onInputChange
+</script>
 </body>
 </html>
